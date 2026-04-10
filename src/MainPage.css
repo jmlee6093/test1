@@ -1,0 +1,276 @@
+.mp-page {
+  background: #ffffff;
+  min-height: 100vh;    
+  padding: 24px 32px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-heading {
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.mp-sub-heading {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.mp-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mp-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 20px;
+  cursor: pointer;
+  height: 140px;        
+  background-size: auto 100%;   
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mp-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 15, 30, 0.45) 0%,
+    rgba(10, 15, 30, 0.75) 35%,
+    rgba(10, 15, 30, 0.88) 100%
+  );
+  border-radius: inherit;
+  z-index: 0;
+  transition: background 0.15s;
+}
+
+.mp-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mp-card--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mp-card__rank {
+  font-size: 22px;
+  font-weight: 700;
+  color: #93c5fd;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.mp-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f9fafb;
+  flex: 1;
+  word-break: keep-all;
+  margin: 0;
+}
+
+.mp-card__data-group {
+  display: flex;
+  gap: 24px;
+}
+
+.mp-card__data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.mp-card__data-label {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.mp-card__data-value {
+  font-size: 13px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.mp-card__data-value--rating {
+  font-size: 13px;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.mp-status-text {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.mp-status-text--error {
+  color: #ef4444;
+}
+
+.mp-people-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f0f4ff;
+  border: 1px solid #c7d7f4;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.mp-people-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.mp-people-label--lead {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-right: 8px;
+}
+
+.mp-counter-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mp-counter-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #4a90d9;
+  background: #ffffff;
+  color: #4a90d9;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.mp-counter-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.mp-counter-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  min-width: 20px;
+  text-align: center;
+}
+
+.mp-people-warn {
+  font-size: 12px;
+  color: #ef4444;
+  margin-left: 8px;
+}
+
+.mp-result-section {
+  margin-top: 30px;
+}
+
+.mp-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mp-result-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.mp-cinema-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #ffffff;
+}
+
+.mp-cinema-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1f2937;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.mp-showtime-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mp-showtime-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.mp-showtime-time {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mp-showtime-info {
+  color: #555;
+  font-size: 13px;
+}
+
+.mp-no-seats {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.mp-ticketing-btn {
+  padding: 8px 16px;
+  background: #E50914;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.mp-error-page {
+  padding: 40px;
+  font-family: sans-serif;
+}
